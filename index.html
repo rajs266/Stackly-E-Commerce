@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="STACKLY — Premium Multi-Category E-Commerce Platform. Electronics, Fashion, Luxury Accessories & Flash Deals." />
+<title>STACKLY — Premium E-Commerce Marketplace</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/webp" href="assets/logo.webp" />
+</head>
+<body>
+
+<!-- ============== GLOBAL PRELOADER ============== -->
+<div id="preloader" class="preloader" aria-hidden="true">
+  <div class="loader-orbit">
+    <span class="orbit-ring"></span>
+    <span class="orbit-ring"></span>
+    <span class="orbit-ring"></span>
+    <img src="assets/logo.webp" alt="STACKLY" class="loader-logo" />
+  </div>
+  <p class="loader-text">Curating Premium Experience…</p>
+</div>
+
+<!-- ============== STICKY HEADER ============== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link" aria-label="STACKLY Home">
+      <img src="assets/logo.webp" alt="STACKLY" class="brand-logo" />
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="404.html">Shop</a></li>
+        <li><a href="404.html">Categories</a></li>
+        <li><a href="404.html">Collections</a></li>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">About</a></li>
+        <li><a href="404.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="404.html" class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </a>
+      <a href="404.html" class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </a>
+      <a href="404.html" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Open Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <div class="auth-btns">
+        <a href="404.html" class="btn-login">Log In</a>
+        <a href="404.html" class="btn-signup">Sign Up</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== MOBILE OVERLAY NAV ============== -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-close" id="mobileClose" aria-label="Close Menu">&times;</button>
+  
+  <a href="index.html" class="mobile-logo-link">
+    <img src="assets/logo.webp" alt="STACKLY" />
+  </a>
+  
+  <ul class="mobile-menu-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="404.html">Shop</a></li>
+    <li><a href="404.html">Categories</a></li>
+    <li><a href="404.html">Collections</a></li>
+    <li><a href="404.html">Blog</a></li>
+    <li><a href="404.html">About</a></li>
+    <li><a href="404.html">Contact</a></li>
+  </ul>
+  
+  <div class="mobile-auth">
+    <a href="404.html" class="btn-login mobile">Log In</a>
+    <a href="404.html" class="btn-signup mobile">Sign Up</a>
+  </div>
+  
+  <div class="mobile-foot">
+    <a href="tel:+919876543210">+91 98765 43210</a>
+  </div>
+</div>
+
+<!-- ============== CART DRAWER ============== -->
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-head">
+    <h3>Your Bag</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close Cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your bag is currently empty.</p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+    <a href="404.html" class="btn-primary cart-checkout">Proceed to Checkout</a>
+  </div>
+</aside>
+<div class="cart-backdrop" id="cartBackdrop"></div>
+
+<!-- ============== HERO SECTION (FULL BANNER - FIXED) ============== -->
+<section class="hero" id="heroSection">
+  
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" data-slide="0">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-01.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">NEW SEASON DROP</span>
+          <h1>Elevate Your <em>Everyday</em> Essentials</h1>
+          <p>Curated electronics, fashion, and luxury accessories engineered for shoppers who want premium design without the clutter.</p>
+          <div class="hero-meta">
+            <span>Free express delivery</span>
+            <span>30-day returns</span>
+            <span>New drops every week</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#electronics" class="btn-primary">Shop Collection</a>
+            <a href="#fashion" class="btn-ghost">Explore Categories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-slide="1">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-02.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">LUXE FASHION</span>
+          <h1>Wear Your <em>Signature</em> Style</h1>
+          <p>Statement silhouettes, premium fabrics, and curated wardrobe staples designed to look polished from first glance to checkout.</p>
+          <div class="hero-meta">
+            <span>Designer edits</span>
+            <span>Season-ready picks</span>
+            <span>Exclusive capsule launches</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#fashion" class="btn-primary">View Lookbook</a>
+            <a href="#flash" class="btn-ghost">Designer Picks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-slide="2">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-03.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">TECH FORWARD</span>
+          <h1>The Future, <em>Delivered</em> Today</h1>
+          <p>Smart gadgets, immersive audio, and pro-grade peripherals arranged in a banner that feels sharp, modern, and easy to browse.</p>
+          <div class="hero-meta">
+            <span>Top-rated gadgets</span>
+            <span>Warranty-backed picks</span>
+            <span>Same-day dispatch</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#electronics" class="btn-primary">Discover Tech</a>
+            <a href="#arrivals" class="btn-ghost">Best Sellers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-slide="3">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-04.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">GAMING ARENA</span>
+          <h1>Level Up Your <em>Gameplay</em></h1>
+          <p>High-performance rigs, tactile controls, and clean neon contrast built to give the hero section more energy without visual overlap.</p>
+          <div class="hero-meta">
+            <span>RGB-ready setups</span>
+            <span>Esports accessories</span>
+            <span>Limited launch offers</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#electronics" class="btn-primary">Shop Gaming</a>
+            <a href="#flash" class="btn-ghost">Accessories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-slide="4">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-05.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">TIMELESS LUXURY</span>
+          <h1>Craftsmanship <em>Redefined</em></h1>
+          <p>Exquisite watches, fine jewelry, and polished accessories with a softer fade treatment so the hero reads like a premium banner.</p>
+          <div class="hero-meta">
+            <span>Collector-grade pieces</span>
+            <span>Gift-ready packaging</span>
+            <span>Elevated finishing</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#luxury" class="btn-primary">Explore Luxury</a>
+            <a href="#arrivals" class="btn-ghost">Watches</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-slide="5">
+      <div class="hero-slide-bg" style="background-image: url('assets/stackly-06.webp');"></div>
+      <div class="hero-slide-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-eyebrow">IMMERSIVE AUDIO</span>
+          <h1>Sound That <em>Moves</em> You</h1>
+          <p>Premium speakers, studio headphones, and wireless audio arranged with cleaner spacing for a stronger e-commerce first impression.</p>
+          <div class="hero-meta">
+            <span>Spatial sound picks</span>
+            <span>Portable power</span>
+            <span>Studio-grade clarity</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#electronics" class="btn-primary">Shop Audio</a>
+            <a href="#flash" class="btn-ghost">Speakers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="hero-arrows">
+    <button class="hero-arrow prev" id="heroPrev" aria-label="Previous Slide">&#8249;</button>
+    <button class="hero-arrow next" id="heroNext" aria-label="Next Slide">&#8250;</button>
+  </div>
+</section>
+
+
+
+<!-- ============== CATEGORY STRIP ============== -->
+<section class="cat-strip reveal">
+  <div class="container">
+    <div class="cat-grid">
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-07.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Electronics</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-08.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Fashion</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-09.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Luxury</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-10.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Audio</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-11.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Footwear</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-12.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Watches</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-13.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Gaming</span>
+      </a>
+      <a href="404.html" class="cat-card" style="background-image: url('assets/stackly-14.webp');">
+        <div class="cat-card-overlay"></div>
+        <span>Home & Living</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ELECTRONICS GRID (FIXED NAMES & IMAGES) ============== -->
+<section class="product-section reveal" id="electronics">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">⚡ Trending Tech</span>
+        <h2>Electronics Spotlight</h2>
+      </div>
+      <a href="404.html" class="view-all">View All →</a>
+    </div>
+    <div class="product-grid">
+
+      <!-- Product 1: Headphones -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-15.webp" alt="Aurora Wireless Headphones" />
+          <span class="badge">-20%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(128)</span></div>
+          <h4>Aurora Wireless Headphones</h4>
+          <div class="price"><span class="now">₹8,499</span><span class="was">₹10,499</span></div>
+          <button class="btn-add" data-name="Aurora Wireless Headphones" data-price="8499" data-img="assets/stackly-15.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 2: Smart Watch -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-16.webp" alt="Nexus Smart Watch Pro" />
+          <span class="badge hot">HOT</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(245)</span></div>
+          <h4>Nexus Smart Watch Pro</h4>
+          <div class="price"><span class="now">₹14,999</span><span class="was">₹17,499</span></div>
+          <button class="btn-add" data-name="Nexus Smart Watch Pro" data-price="14999" data-img="assets/stackly-16.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 3: Laptop -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-17.webp" alt="UltraBook 14 Pro" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(89)</span></div>
+          <h4>UltraBook 14" Pro</h4>
+          <div class="price"><span class="now">₹89,999</span><span class="was">₹99,999</span></div>
+          <button class="btn-add" data-name='UltraBook 14" Pro' data-price="89999" data-img="assets/stackly-17.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 4: Earbuds -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-18.webp" alt="Echo Buds Studio" />
+          <span class="badge">-15%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(312)</span></div>
+          <h4>Echo Buds Studio</h4>
+          <div class="price"><span class="now">₹4,299</span><span class="was">₹4,999</span></div>
+          <button class="btn-add" data-name="Echo Buds Studio" data-price="4299" data-img="assets/stackly-18.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 5: Camera (FIXED IMAGE) -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-19.webp" alt="Vista Mirrorless Camera" />
+          <span class="badge hot">HOT</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(67)</span></div>
+          <h4>Vista Mirrorless Camera</h4>
+          <div class="price"><span class="now">₹56,499</span><span class="was">₹62,000</span></div>
+          <button class="btn-add" data-name="Vista Mirrorless Camera" data-price="56499" data-img="assets/stackly-19.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 6: Speaker -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-20.webp" alt="BassWave Portable Speaker" />
+          <span class="badge">-25%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(156)</span></div>
+          <h4>BassWave Portable Speaker</h4>
+          <div class="price"><span class="now">₹3,499</span><span class="was">₹4,699</span></div>
+          <button class="btn-add" data-name="BassWave Portable Speaker" data-price="3499" data-img="assets/stackly-20.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 7: Tablet -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-21.webp" alt="SlatePad 11 Air" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(203)</span></div>
+          <h4>SlatePad 11" Air</h4>
+          <div class="price"><span class="now">₹38,499</span><span class="was">₹42,999</span></div>
+          <button class="btn-add" data-name='SlatePad 11" Air' data-price="38499" data-img="assets/stackly-21.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 8: Gaming Mouse -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-22.webp" alt="StealthClick Gaming Mouse" />
+          <span class="badge">-10%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(178)</span></div>
+          <h4>StealthClick Gaming Mouse</h4>
+          <div class="price"><span class="now">₹2,799</span><span class="was">₹3,099</span></div>
+          <button class="btn-add" data-name="StealthClick Gaming Mouse" data-price="2799" data-img="assets/stackly-22.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 9: Smartphone (NEW) -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-23.webp" alt="Galaxy Pro Max 5G" />
+          <span class="badge hot">HOT</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(456)</span></div>
+          <h4>Galaxy Pro Max 5G</h4>
+          <div class="price"><span class="now">₹74,999</span><span class="was">₹84,999</span></div>
+          <button class="btn-add" data-name="Galaxy Pro Max 5G" data-price="74999" data-img="assets/stackly-23.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 10: Gaming Laptop (NEW) -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-24.webp" alt="Predator Gaming Laptop" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(92)</span></div>
+          <h4>Predator Gaming Laptop</h4>
+          <div class="price"><span class="now">₹1,24,999</span><span class="was">₹1,39,999</span></div>
+          <button class="btn-add" data-name="Predator Gaming Laptop" data-price="124999" data-img="assets/stackly-24.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 11: Backpack (NEW) -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-25.webp" alt="Urban Trek Backpack" />
+          <span class="badge">-30%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(289)</span></div>
+          <h4>Urban Trek Backpack</h4>
+          <div class="price"><span class="now">₹3,499</span><span class="was">₹4,999</span></div>
+          <button class="btn-add" data-name="Urban Trek Backpack" data-price="3499" data-img="assets/stackly-25.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Product 12: Power Bank (NEW) -->
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-26.webp" alt="TurboCharge 20000mAh" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(134)</span></div>
+          <h4>TurboCharge 20000mAh</h4>
+          <div class="price"><span class="now">₹1,999</span><span class="was">₹2,499</span></div>
+          <button class="btn-add" data-name="TurboCharge 20000mAh" data-price="1999" data-img="assets/stackly-26.webp">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROMO BANNER ============== -->
+<section class="promo-banner reveal" style="background-image: linear-gradient(115deg, rgba(40,55,90,0.78), rgba(120,90,150,0.62)), url('assets/stackly-27.webp');">
+  <div class="container promo-inner">
+    <span class="promo-tag">⚡ FLASH SALE</span>
+    <h2>Up to <em>60% OFF</em> on Designer Fashion</h2>
+    <p>Limited stock. Premium labels. Ends midnight.</p>
+    <a href="404.html" class="btn-primary">Grab the Deal</a>
+  </div>
+</section>
+
+<!-- ============== FASHION SLIDER ============== -->
+<section class="product-section reveal" id="fashion">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">👗 Style Edit</span>
+        <h2>Fashion Carousel</h2>
+      </div>
+      <div class="slider-nav">
+        <button class="snav-btn" id="fashionPrev" aria-label="Previous">‹</button>
+        <button class="snav-btn" id="fashionNext" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="track-wrap">
+      <div class="track" id="fashionTrack">
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-28.webp" alt="Urban Bomber Jacket" /></div>
+          <div class="product-body">
+            <h4>Urban Bomber Jacket</h4>
+            <div class="price"><span class="now">₹5,499</span></div>
+            <button class="btn-add" data-name="Urban Bomber Jacket" data-price="5499" data-img="assets/stackly-28.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-29.webp" alt="AirFlex Sneakers" /></div>
+          <div class="product-body">
+            <h4>AirFlex Sneakers</h4>
+            <div class="price"><span class="now">₹6,999</span></div>
+            <button class="btn-add" data-name="AirFlex Sneakers" data-price="6999" data-img="assets/stackly-29.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-30.webp" alt="Silk Pleated Dress" /></div>
+          <div class="product-body">
+            <h4>Silk Pleated Dress</h4>
+            <div class="price"><span class="now">₹7,299</span></div>
+            <button class="btn-add" data-name="Silk Pleated Dress" data-price="7299" data-img="assets/stackly-30.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-31.webp" alt="Cotton Crew Tee" /></div>
+          <div class="product-body">
+            <h4>Cotton Crew Tee</h4>
+            <div class="price"><span class="now">₹1,299</span></div>
+            <button class="btn-add" data-name="Cotton Crew Tee" data-price="1299" data-img="assets/stackly-31.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-32.webp" alt="Leather Oxford Shoes" /></div>
+          <div class="product-body">
+            <h4>Leather Oxford Shoes</h4>
+            <div class="price"><span class="now">₹8,499</span></div>
+            <button class="btn-add" data-name="Leather Oxford Shoes" data-price="8499" data-img="assets/stackly-32.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-33.webp" alt="Linen Casual Shirt" /></div>
+          <div class="product-body">
+            <h4>Linen Casual Shirt</h4>
+            <div class="price"><span class="now">₹2,599</span></div>
+            <button class="btn-add" data-name="Linen Casual Shirt" data-price="2599" data-img="assets/stackly-33.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-34.webp" alt="Oversized Hoodie" /></div>
+          <div class="product-body">
+            <h4>Oversized Hoodie</h4>
+            <div class="price"><span class="now">₹3,199</span></div>
+            <button class="btn-add" data-name="Oversized Hoodie" data-price="3199" data-img="assets/stackly-34.webp">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card slim">
+          <div class="product-media"><img src="assets/stackly-35.webp" alt="Slim Fit Denim Jeans" /></div>
+          <div class="product-body">
+            <h4>Slim Fit Denim Jeans</h4>
+            <div class="price"><span class="now">₹2,899</span></div>
+            <button class="btn-add" data-name="Slim Fit Denim Jeans" data-price="2899" data-img="assets/stackly-35.webp">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LUXURY MATRIX ============== -->
+<section class="product-section luxury-section reveal" id="luxury">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">💎 Premium Edit</span>
+        <h2>Luxury Accessories</h2>
+      </div>
+      <a href="404.html" class="view-all">Discover All →</a>
+    </div>
+    <div class="product-grid four">
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-36.webp" alt="Heritage Gold Chronograph" />
+          <span class="badge gold">LUXE</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(89)</span></div>
+          <h4>Heritage Gold Chronograph</h4>
+          <div class="price"><span class="now">₹42,999</span></div>
+          <button class="btn-add" data-name="Heritage Gold Chronograph" data-price="42999" data-img="assets/stackly-36.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-37.webp" alt="Onyx Aviator Sunglasses" />
+          <span class="badge gold">LUXE</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(67)</span></div>
+          <h4>Onyx Aviator Sunglasses</h4>
+          <div class="price"><span class="now">₹12,499</span></div>
+          <button class="btn-add" data-name="Onyx Aviator Sunglasses" data-price="12499" data-img="assets/stackly-37.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-38.webp" alt="Italian Leather Tote" />
+          <span class="badge gold">LUXE</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(134)</span></div>
+          <h4>Italian Leather Tote</h4>
+          <div class="price"><span class="now">₹24,999</span></div>
+          <button class="btn-add" data-name="Italian Leather Tote" data-price="24999" data-img="assets/stackly-38.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-39.webp" alt="Noir Eau de Parfum" />
+          <span class="badge gold">LUXE</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(56)</span></div>
+          <h4>Noir Eau de Parfum 100ml</h4>
+          <div class="price"><span class="now">₹9,799</span></div>
+          <button class="btn-add" data-name="Noir Eau de Parfum 100ml" data-price="9799" data-img="assets/stackly-39.webp">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== FLASH DEALS ============== -->
+<section class="product-section reveal" id="flash">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow flame">🔥 Flash Sale</span>
+        <h2>Deals Ending Soon</h2>
+      </div>
+      <div class="countdown" id="countdown">
+        <span><b id="cdH">12</b>h</span><span><b id="cdM">34</b>m</span><span><b id="cdS">56</b>s</span>
+      </div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-40.webp" alt="Designer Optics Frame" />
+          <span class="badge hot">-40%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(78)</span></div>
+          <h4>Designer Optics Frame</h4>
+          <div class="price"><span class="now">₹2,999</span><span class="was">₹4,999</span></div>
+          <button class="btn-add" data-name="Designer Optics Frame" data-price="2999" data-img="assets/stackly-40.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-41.webp" alt="Slim Leather Wallet" />
+          <span class="badge hot">-50%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(234)</span></div>
+          <h4>Slim Leather Wallet</h4>
+          <div class="price"><span class="now">₹1,499</span><span class="was">₹2,999</span></div>
+          <button class="btn-add" data-name="Slim Leather Wallet" data-price="1499" data-img="assets/stackly-41.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-25.webp" alt="Urban Trek Backpack" />
+          <span class="badge hot">-35%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(189)</span></div>
+          <h4>Urban Trek Backpack</h4>
+          <div class="price"><span class="now">₹3,899</span><span class="was">₹5,999</span></div>
+          <button class="btn-add" data-name="Urban Trek Backpack" data-price="3899" data-img="assets/stackly-25.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-42.webp" alt="Classic Steel Watch" />
+          <span class="badge hot">-45%</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(145)</span></div>
+          <h4>Classic Steel Watch</h4>
+          <div class="price"><span class="now">₹6,499</span><span class="was">₹11,499</span></div>
+          <button class="btn-add" data-name="Classic Steel Watch" data-price="6499" data-img="assets/stackly-42.webp">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== NEW ARRIVALS ============== -->
+<section class="product-section reveal arrivals" id="arrivals">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">🌟 Just Landed</span>
+        <h2>New Arrivals</h2>
+      </div>
+      <a href="404.html" class="view-all">See All →</a>
+    </div>
+    <div class="product-grid four">
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-43.webp" alt="Nordic Lounge Chair" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(45)</span></div>
+          <h4>Nordic Lounge Chair</h4>
+          <div class="price"><span class="now">₹18,499</span></div>
+          <button class="btn-add" data-name="Nordic Lounge Chair" data-price="18499" data-img="assets/stackly-43.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-44.webp" alt="Pearl Drop Necklace" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(67)</span></div>
+          <h4>Pearl Drop Necklace</h4>
+          <div class="price"><span class="now">₹7,899</span></div>
+          <button class="btn-add" data-name="Pearl Drop Necklace" data-price="7899" data-img="assets/stackly-44.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-41.webp" alt="RFID Card Holder" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐ <span>(112)</span></div>
+          <h4>RFID Card Holder</h4>
+          <div class="price"><span class="now">₹1,299</span></div>
+          <button class="btn-add" data-name="RFID Card Holder" data-price="1299" data-img="assets/stackly-41.webp">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/stackly-45.webp" alt="Ambient Desk Lamp" />
+          <span class="badge">NEW</span>
+          <div class="product-actions">
+            <button class="p-action wish" aria-label="Add to Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="p-action quick" aria-label="Quick View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-rating">⭐⭐⭐⭐⭐ <span>(78)</span></div>
+          <h4>Ambient Desk Lamp</h4>
+          <div class="price"><span class="now">₹3,499</span></div>
+          <button class="btn-add" data-name="Ambient Desk Lamp" data-price="3499" data-img="assets/stackly-45.webp">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="testimonials-section reveal" id="testimonials">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">💬 What They Say</span>
+      <h2>Customer Love</h2>
+    </div>
+    <div class="testimonials-track">
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The quality is absolutely phenomenal. My headphones arrived in perfect condition and the sound quality blew me away. STACKLY has become my go-to for all tech purchases!"</p>
+        <div class="t-author">
+          <img src="assets/stackly-46.webp" alt="Priya Sharma" />
+          <div>
+            <strong>Priya Sharma</strong>
+            <span>Mumbai, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Fast delivery and excellent packaging. The luxury watch I ordered exceeded my expectations. Customer support was incredibly helpful throughout the process."</p>
+        <div class="t-author">
+          <img src="assets/stackly-47.webp" alt="Rahul Verma" />
+          <div>
+            <strong>Rahul Verma</strong>
+            <span>Delhi, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best online shopping experience I've had in India. The UI is smooth, checkout is seamless, and the product range is unmatched. Highly recommend!"</p>
+        <div class="t-author">
+          <img src="assets/stackly-48.webp" alt="Ananya Reddy" />
+          <div>
+            <strong>Ananya Reddy</strong>
+            <span>Hyderabad, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The flash deals are insane! I got a gaming laptop at 40% off. Genuine products, proper warranty — this is how e-commerce should be done."</p>
+        <div class="t-author">
+          <img src="assets/stackly-49.webp" alt="Karthik Iyer" />
+          <div>
+            <strong>Karthik Iyer</strong>
+            <span>Chennai, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FEATURES STRIP ============== -->
+<section class="features-strip reveal">
+  <div class="container feat-grid">
+    <div class="feat">
+      <div class="feat-ic">🚚</div>
+      <h5>Free Shipping</h5>
+      <p>On orders above ₹999</p>
+    </div>
+    <div class="feat">
+      <div class="feat-ic">🔄</div>
+      <h5>Easy Returns</h5>
+      <p>30-day hassle-free</p>
+    </div>
+    <div class="feat">
+      <div class="feat-ic">🔒</div>
+      <h5>Secure Payments</h5>
+      <p>Encrypted checkout</p>
+    </div>
+    <div class="feat">
+      <div class="feat-ic">💬</div>
+      <h5>24/7 Support</h5>
+      <p>Always here to help</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== NEWSLETTER + CONTACT ============== -->
+<section class="newsletter reveal" style="background-image: linear-gradient(120deg, rgba(30,40,60,0.9), rgba(60,40,80,0.85)), url('assets/stackly-50.webp');">
+  <div class="container news-inner">
+    <div class="news-text">
+      <h2>Join the <em>Inner Circle</em></h2>
+      <p>Get 10% off your first order & early access to drops.</p>
+      <address class="contact-mini">
+        📍 MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008<br>
+        📞 <a href="tel:+919876543210">+91 9876543210</a>
+      </address>
+    </div>
+    <form class="news-form" id="newsForm" novalidate>
+      <div class="field">
+        <input type="text" id="nName" placeholder="Your Name" autocomplete="name" />
+        <small class="err" id="nNameErr"></small>
+      </div>
+      <div class="field">
+        <input type="email" id="nEmail" placeholder="Your Email Address" autocomplete="email" />
+        <small class="err" id="nEmailErr"></small>
+      </div>
+      <div class="field">
+        <input type="tel" id="nPhone" placeholder="Mobile (10 digits)" autocomplete="tel" maxlength="10" />
+        <small class="err" id="nPhoneErr"></small>
+      </div>
+      <button type="submit" class="btn-primary">Subscribe Now</button>
+      <p class="news-success" id="newsSuccess">✓ Welcome aboard! Check your inbox.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============== FOOTER (FIXED MOBILE) ============== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="foot-left">
+      <a href="index.html" class="foot-logo-link"><img src="assets/logo.webp" alt="STACKLY" /></a>
+      <address>
+        MMR Complex, Chinna Thirupathi,<br>
+        near Chinna Muniyappan Kovil,<br>
+        Salem, Tamil Nadu 636008
+      </address>
+      <p class="foot-contact">
+        <a href="tel:+919876543210">📞 +91 9876543210</a><br>
+        <a href="mailto:support@stackly.com">✉️ support@stackly.com</a>
+      </p>
+      <div class="socials">
+        <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v6.9A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.1.85A4.5 4.5 0 0 0 21.85 1.3a10 10 0 0 1-3.2 1.22 4.49 4.49 0 0 0-7.78 4.1A12.74 12.74 0 0 1 1.7 2.15a4.48 4.48 0 0 0 1.4 6 4.4 4.4 0 0 1-2-.55v.06a4.5 4.5 0 0 0 3.6 4.4 4.5 4.5 0 0 1-2 .08 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 17.5a12.7 12.7 0 0 0 6.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6A9.2 9.2 0 0 0 23 3z"/></svg></a>
+        <a href="404.html" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.2-1.5-.9-2.2c-.8-.9-1.7-.9-2.2-1C16.4 3.5 12 3.5 12 3.5s-4.4 0-7.9.3c-.5.1-1.4.1-2.2 1C1.2 5.5 1 7 1 7S.8 8.8.8 10.5v1.6C.8 13.9 1 15.7 1 15.7s.2 1.5.9 2.2c.8.9 1.9.9 2.4 1 1.7.2 7.7.3 7.7.3s4.4 0 7.9-.3c.5-.1 1.4-.1 2.2-1 .7-.7.9-2.2.9-2.2s.2-1.8.2-3.5v-1.6C23.2 8.8 23 7 23 7zM9.7 14.4V7.9l5.7 3.3-5.7 3.2z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="foot-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="404.html">Shop</a></li>
+        <li><a href="404.html">Categories</a></li>
+        <li><a href="404.html">Collections</a></li>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">About</a></li>
+        <li><a href="404.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h5>Collections</h5>
+      <ul>
+        <li><a href="404.html">Electronics</a></li>
+        <li><a href="404.html">Fashion</a></li>
+        <li><a href="404.html">Luxury</a></li>
+        <li><a href="404.html">Footwear</a></li>
+        <li><a href="404.html">Watches</a></li>
+        <li><a href="404.html">Accessories</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h5>Customer Care</h5>
+      <ul>
+        <li><a href="404.html">Help Center</a></li>
+        <li><a href="404.html">Track Order</a></li>
+        <li><a href="404.html">Returns & Refunds</a></li>
+        <li><a href="404.html">Shipping Info</a></li>
+        <li><a href="404.html">Privacy Policy</a></li>
+        <li><a href="404.html">Terms of Service</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="foot-bottom">
+    <p>© <span id="year"></span> STACKLY. All rights reserved. Crafted with precision.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
